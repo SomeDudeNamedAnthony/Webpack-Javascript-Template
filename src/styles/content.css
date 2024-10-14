@@ -1,0 +1,17 @@
+#content {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+
+#content #header {
+	flex: 0 1 auto;
+}
+
+#content #body {
+	flex: 1 1 auto;
+}
+
+#content #footer {
+	flex: 0 1 48px;
+}

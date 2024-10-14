@@ -1,0 +1,12 @@
+#content #body {
+	background-color: #6d6d6d;
+	text-align: center;
+	display: flex;
+}
+
+#content #body #text {
+	font-size: 1.5rem;
+	width: 50%;
+	margin: auto;
+	margin-top: 0;
+}
