@@ -34,5 +34,18 @@ gh repo clone SomeDudeNamedAnthony/Webpack-Templates --branch JS-App --recursive
 
 ### Technologies
 
+*Each technolgy has a link to their [*npmjs*](https://www.npmjs.com) package.*  
+*Except if said technolgy has a website\**
+
 * [Webpack](https://webpack.js.org) [*npmjs*](https://www.npmjs.com/package/webpack)
 * [Babel](https://babeljs.io) [*npmjs*](https://www.npmjs.com/package/Babel)
+* [babel-loader](https://www.npmjs.com/package/babel-loader)
+* [copy-webpack-plugin](https://www.npmjs.com/package/copy-webpack-plugin)
+* [eslint](https://eslint.org) [*npmjs*](https://www.npmjs.com/package/eslint)
+* [html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)
+* [Prettier](https://prettier.io) [*npmjs*](https://www.npmjs.com/package/prettier)
+* [serve](https://www.npmjs.com/package/serve)
+* [Stylelint](https://stylelint.io) [*npmjs*](https://www.npmjs.com/package/stylelint)
+* [stylelint-config-standard](https://www.npmjs.com/package/stylelint-config-standard)
+* [webpack-merge](https://www.npmjs.com/package/webpack-merge)
+* [webpack-obfuscator](https://www.npmjs.com/package/webpack-obfuscator)
