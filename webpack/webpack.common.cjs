@@ -4,9 +4,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const rootDir = Path.join(__dirname, "..");
 const sourceDir = Path.join(rootDir, "src");
-const viewsDir = Path.join(sourceDir, "views");
-const stylesDir = Path.join(sourceDir, "styles");
-const assetsDir = Path.join(sourceDir, "assets");
+
+const publicDir = Path.join(rootDir, "public");
+
+const viewsDir = Path.join(publicDir, "views");
+const stylesDir = Path.join(publicDir, "styles");
+const scriptsDir = Path.join(publicDir, "scripts");
+
+const assetsDir = Path.join(publicDir, "assets");
 const distDir = Path.join(rootDir, "dist");
 
 const appName = "My Application";
@@ -27,7 +32,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.m?js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
@@ -55,19 +60,18 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: Path.join(viewsDir, "*.html"),
-                    to: "[name].html",
+                    from: publicDir,
+                    to: "",
                     globOptions: {
-                        ignore: [Path.join(viewsDir, "index.html")],
+                        ignore: [Path.join(viewsDir)],
                     },
                 },
                 {
-                    from: Path.join(stylesDir, "*.css"),
-                    to: "[name].css",
-                },
-                {
-                    from: Path.join(assetsDir),
-                    to: "",
+                    from: viewsDir,
+                    to: "[name][ext]",
+                    globOptions: {
+                        ignore: [Path.join(viewsDir, "index.html")],
+                    },
                 },
             ],
         }),
